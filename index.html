@@ -185,9 +185,9 @@
       <label class="elements__control-wrapper">
         Colors
         <select>
-          <option value="">Orange</option>
-          <option value="">Blue</option>
-          <option value="">Green</option>
+          <option value="orange">Orange</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
         </select>
       </label>
       <label class="elements__control-wrapper">
@@ -209,6 +209,15 @@
       <p class="elements__control-wrapper">
         <button>F!!!</button>
       </p>
+      <label class="elements__control-wrapper">
+        City
+        <input type="text" list="cities" placeholder="Enter name...">
+        <datalist id="cities">
+          <option value="Kharkiv">Kharkiv</option>
+          <option value="Kyiv">Kyiv</option>
+          <option value="Lviv">Lviv</option>
+        </datalist>
+      </label>
       <div class="elements__control-wrapper">
         <details>
           <summary>Please, no</summary>
@@ -218,6 +227,10 @@
     </div>
 
     <style>
+      #elements .elements__title {
+        margin-bottom: 5px;
+      }
+
       #elements .elements__control-wrapper {
         display: flex;
         align-items: center;
@@ -236,6 +249,23 @@
       #open-ui .open-ui__img {
         display: block;
         margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="decorators">
+    <h2 class="decorators__title next">Decor<span class="decorators__a">@</span>tors</h2>
+    <a class="bottom-link" href="https://github.com/tc39/proposal-decorators" target="_blank" rel="noreferrer">proposal-decorators</a>
+    <style>
+      #decorators .decorators__title {
+        margin: 150px 0 0;
+        text-align: center;
+        font-size: 100px;
+      }
+
+      #decorators .decorators__a {
+        font-size: 120%;
+        color: red;
       }
     </style>
   </section>
