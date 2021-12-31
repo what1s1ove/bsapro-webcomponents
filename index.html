@@ -221,6 +221,33 @@
     </p>
   </section>
 
+  <section class="slide" id="dom-implementation">
+    <h2 class="dom-implementation__title">DOM Implementation 🌳</h2>
+    <pre class="dom-implementation__code">
+      <code>const initPlayer = () => {</code>
+      <code>  const playerNode = document.querySelector('.episode__native-player');</code>
+      <code> </code>
+      <code>  const hasPlayerNode = Boolean(playerNode);</code>
+      <code> </code>
+      <code> if (!hasPlayerNode) { </code>
+      <code>   return; </code>
+      <code> } </code>
+      <code> </code>
+      <code>  initPlaybackRate(playerNode); </code>
+      <code>  initSkip(playerNode); </code>
+      <code>  initTimeline(playerNode); </code>
+      <code>  initVolume(playerNode); </code>
+      <code>  initAudio(playerNode); </code>
+      <code>}; </code>
+    </pre>
+
+    <style>
+      #dom-implementation .dom-implementation__code {
+        font-size: 12px;
+      }
+    </style>
+  </section>
+
   <section class="slide" id="polymer">
     <h2 class="polymer__title">Polymer</h2>
     <img class="polymer__img next" width="320" src="pictures/polymer-logo.svg" alt="Polymer">
