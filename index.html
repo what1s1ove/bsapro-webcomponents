@@ -34,9 +34,8 @@
 
   <section class="slide" id="cover">
     <h2 class="cover__title">Web Components</h2>
-    <a class="cover__link" href="https://www.webcomponents.org/" target="_blank" rel="noreferrer">
-      <img src="pictures/webcomponents.svg" width="250" height="250" alt="Webcomponents Logo">
-    </a>
+    <img src="pictures/webcomponents.svg" width="350" alt="Webcomponents Logo">
+    <a class="bottom-link" href="https://www.webcomponents.org/" target="_blank" rel="noreferrer">WebComponents</a>
     <p class="copyright right">
       <a href="https://whatislove.dev/" target="_blank" rel="noreferrer">© Vladyslav Zubko</a>
     </p>
@@ -49,12 +48,8 @@
       }
 
       #cover .cover__title {
-        margin: 100px 0 0;
+        margin: 50px 0 20px;
         text-align: center;
-      }
-
-      #cover .cover__link {
-        background-image: none;
       }
     </style>
   </section>
@@ -71,32 +66,36 @@
   </section>
 
   <section class="slide" id="who">
-    <h2 class="who__title">Who I am</h2>
+    <h2 class="who__title">Positions</h2>
     <ul class="who__list">
       <li class="who__item who__item--full">
         <a class="who__link" href="https://binary-studio.com/" target="_blank" rel="noreferrer">
           <img src="pictures/binary-studio-logo.svg" width="300" alt="Binary Studio Logo">
         </a>
-        FullStack Developer
+        Front-End Developer
       </li>
       <li class="who__item who__item--half">
-        <a class="who__link" href="https://binary-studio.com/" target="_blank" rel="noreferrer">
-          <img src="pictures/htmlacademy-logo.svg" width="90" alt="HTML Academy Logo">
+        <a class="who__link" href="https://htmlacademy.ru/" target="_blank" rel="noreferrer">
+          <img src="pictures/htmlacademy-logo.svg" width="70" alt="HTML Academy Logo">
         </a>
         Mentor / Captain / Interviewer / Author
       </li>
       <li class="who__item who__item--half">
-        <a class="who__link" href="https://binary-studio.com/" target="_blank" rel="noreferrer">
-          <img src="pictures/liga-a-logo.svg" width="90" alt="Liga A Logo">
+        <a class="who__link" href="https://ligaa.agency/" target="_blank" rel="noreferrer">
+          <img src="pictures/liga-a-logo.svg" width="70" alt="Liga A Logo">
         </a>
         Head Mentor
       </li>
     </ul>
     <style>
+      #who .who__title {
+        margin-bottom: 50px;
+      }
+
       #who .who__list {
         display: flex;
         flex-wrap: wrap;
-        gap: 40px 0;
+        gap: 50px 0;
       }
 
       #who .who__item {
@@ -123,6 +122,370 @@
 
       #who .who__link {
         background-image: none;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="today">
+    <h2>In the program today...</h2>
+    <ul class="next">
+      <li>The Story</li>
+    </ul>
+  </section>
+
+  <section class="slide" id="pirocasts">
+    <h2 class="pirocasts__title">The Pirocasts</h2>
+    <img class="pirocasts__img next" src="pictures/pirocasts-logo.svg" width="300" height="300" alt="Pirocasts">
+    <a class="bottom-link" href="https://what1s1ove.github.io/pirocasts/episodes/15/" target="_blank" rel="noreferrer">The Pirocasts</a>
+
+    <style>
+      #pirocasts .pirocasts__img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="eleventy">
+    <h2 class="eleventy__title">11ty <span class="next">– a simpler static site generator.</span></h2>
+    <p class="eleventy__wrapper next">
+      <img src="pictures/11ty-logo.svg" width="200" alt="11ty">
+    </p>
+    <a class="bottom-link" href="https://www.11ty.dev/" target="_blank" rel="noreferrer">11ty</a>
+
+    <style>
+      #eleventy .eleventy__title {
+        margin-bottom: 65px;
+      }
+
+      #eleventy .eleventy__wrapper {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        margin: 0 auto;
+        background-color: #222222;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="podcast">
+    <h2 class="podcast__title">Podcasts are always about...</h2>
+    <p class="podcast__wrapper next">
+      Акула - Кислотный Диджей:
+      <audio class="podcast__audio" src="https://cdn.drivemusic.club/dl/online/B03E4sbH7QySfhziiCxPqA/1641009276/download_music/2014/02/akula-kislotnyjj-didzhejj.mp3" controls></audio>
+    </p>
+    <ul class="podcast__list next">
+      <li class="podcast__item">Works everywhere</li>
+      <li class="podcast__item next">Works <b>well</b> everywhere</li>
+      <li class="podcast__item next">Buuuut, sometimes isn't very convenient</li>
+    </ul>
+
+    <style>
+      #podcast .podcast__title {
+        margin-bottom: 50px;
+      }
+
+      #podcast .podcast__wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #podcast .podcast__audio {
+        width: 100%;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="requests">
+    <h2 class="requests__title">And then the requests start...</h2>
+    <ul class="requests__list next">
+      <li class="requests__item">Playback Rate button <b class="next">– Done!</b></li>
+      <li class="requests__item next">Skip buttons <b class="next">– Done!</b></li>
+      <li class="requests__item next">Download audio <b class="next">– Done!</b></li>
+      <li class="requests__item next">Save settings (speed 🐁, current value) <b class="next">– In progress...</b></li>
+    </ul>
+    <img class="requests__img next" src="pictures/pirocast-old-player.png" width="350" alt="Pirocasts">
+
+    <style>
+      #requests .requests__img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="result">
+    <h2 class="result__title">As result</h2>
+    <p class="result__text next">
+      <a href="https://what1s1ove.github.io/pirocasts/" target="_blank" rel="noreferrer">https://what1s1ove.github.io/pirocasts/</a>
+    </p>
+  </section>
+
+  <section class="slide" id="dom-implementation">
+    <h2 class="dom-implementation__title">DOM Implementation 🌳</h2>
+    <pre class="dom-implementation__code">
+      <code>const initPlayer = () => {</code>
+      <code>  const playerNode = document.querySelector('.episode__native-player');</code>
+      <code> </code>
+      <code>  const hasPlayerNode = Boolean(playerNode);</code>
+      <code> </code>
+      <code> if (!hasPlayerNode) { </code>
+      <code>   return; </code>
+      <code> } </code>
+      <code> </code>
+      <code>  initPlaybackRate(playerNode); </code>
+      <code>  initSkip(playerNode); </code>
+      <code>  initTimeline(playerNode); </code>
+      <code>  initVolume(playerNode); </code>
+      <code>  initAudio(playerNode); </code>
+      <code>}; </code>
+    </pre>
+
+    <style>
+      #dom-implementation .dom-implementation__code {
+        font-size: 12px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="dom-implementation-issues">
+    <h2 class="dom-implementation-issues__title">DOM Implementation Issues</h2>
+    <video class="dom-implementation-issues__video next" src="pictures/out-of-sync.mp4" width="400" autoplay muted loop playsinline></video>
+    <ul class="dom-implementation-issues__list next">
+      <li class="dom-implementation-issues__item">Out of Sync</li>
+      <li class="dom-implementation-issues__item next">Duplication of logic</li>
+      <li class="dom-implementation-issues__item next">Think of many places</li>
+    </ul>
+
+    <style>
+      #dom-implementation-issues .dom-implementation-issues__video {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="class-implementation">
+    <h2 class="class-implementation">Class Implementation 🧱</h2>
+    <div class="class-implementation__code-wrapper">
+      <pre class="class-implementation__code next">
+        <code>class Abstract {</code>
+        <code>  #node = null;</code>
+        <code> </code>
+        <code>  get node() {}</code>
+        <code>  get template() {}</code>
+        <code>  removeNode() {}</code>
+        <code>}</code>
+        <code> </code>
+        <div class="next">
+          <code>class Smart extends AbstractView {</code>
+            <code>  #callbacks = {}</code>
+            <code> </code>
+            <code>  updateNode() {}</code>
+            <code>  initListeners() {}</code>
+            <code>  restoreHandlers() {}</code>
+            <code>}</code>
+            <code> </code>
+        </div>
+      </pre>
+      <pre class="class-implementation__code next">
+        <code>class Timeline extends Smart {</code>
+        <code>  init() {</code>
+        <code>    this.initListeners();</code>
+        <code>  }</code>
+        <code>}</code>
+        <code> </code>
+        <div class="next">
+          <code>class Audio extends Smart {</code>
+            <code>  get template() {</code>
+            <code>    return `</code>
+            <code>      &lt;button</code>
+            <code>        class="player__skip-button"</code>
+            <code>        name="<mark class="important">${SkipAction.PREV}</mark>"</code>
+            <code>       &gt;</code>
+            <code>    `</code>
+            <code>  }</code>
+            <code>}</code>
+        </div>
+      </pre>
+    </div>
+
+    <style>
+      #class-implementation .class-implementation__code-wrapper {
+        display: flex;
+        gap: 50px;
+      }
+
+      #class-implementation .class-implementation__code {
+        width: 50%;
+        font-size: 12px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="class-implementation-issues">
+    <h2 class="class-implementation-issues__title">Class Implementation Issues</h2>
+    <p class="class-implementation-issues__desc-wrapper">
+      <b class="class-implementation-issues__desc next">OverKill 🧨</b>
+      <small class="class-implementation-issues__desc-and next">(and strings)</small>
+    </p>
+    <style>
+      #class-implementation-issues .class-implementation-issues__title {
+        margin-bottom: 140px;
+      }
+
+      #class-implementation-issues .class-implementation-issues__desc-wrapper {
+        display: grid;
+        text-align: center;
+      }
+
+      #class-implementation-issues .class-implementation-issues__desc {
+        font-size: 75px;
+        line-height: 1;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="polymer">
+    <h2 class="polymer__title">Polymer</h2>
+    <img class="polymer__img next" width="320" src="pictures/polymer-logo.svg" alt="Polymer">
+    <p class="polymer__desc next">
+      <span class="polymer__desc-lie">
+        Framework
+        <span class="polymer__desc-dash next"></span>
+      </span>
+      <span class="polymer__desc-truth next">Set of Polyfills</span>
+    </p>
+    <a class="bottom-link" href="https://polymer-library.polymer-project.org/" target="_blank" rel="noreferrer">Polymer</a>
+
+    <style>
+      #polymer .polymer__img {
+        display: block;
+        margin: 0 auto 25px;
+      }
+
+      #polymer .polymer__desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.5;
+      }
+
+      #polymer .polymer__desc-lie {
+        position: relative;
+      }
+
+      #polymer .polymer__desc-dash {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(10deg);
+        width: 100%;
+        height: 2px;
+        background-color: red;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="lit">
+    <h2 class="lit__title">Lit</h2>
+    <img class="lit__img next" width="220" src="pictures/lit-logo.svg" alt="Lit">
+    <a class="bottom-link" href="https://lit.dev/" target="_blank" rel="noreferrer">Lit</a>
+    <style>
+      #lit .lit__img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="elements">
+    <h2 class="elements__title">HTML Element</h2>
+    <div class="elements__wrapper next">
+      <label class="elements__control-wrapper">
+        Colors
+        <select>
+          <option value="orange">Orange</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+      </label>
+      <label class="elements__control-wrapper">
+        🤐
+        <input type="text" value="Yeah senpai">
+      </label>
+      <label class="elements__control-wrapper">
+        How long?
+        <input type="range" value="17">
+      </label>
+      <label class="elements__control-wrapper">
+        When
+        <input type="date" value="2007-01-01">
+      </label>
+      <label class="elements__control-wrapper">
+        $$$
+        <input type="number" value="322">
+      </label>
+      <p class="elements__control-wrapper">
+        <button>F!!!</button>
+      </p>
+      <label class="elements__control-wrapper">
+        City
+        <input type="text" list="cities" placeholder="Enter name...">
+        <datalist id="cities">
+          <option value="Kharkiv">Kharkiv</option>
+          <option value="Kyiv">Kyiv</option>
+          <option value="Lviv">Lviv</option>
+        </datalist>
+      </label>
+      <div class="elements__control-wrapper">
+        <details>
+          <summary>Please, no</summary>
+          🔞
+        </details>
+      </div>
+    </div>
+
+    <style>
+      #elements .elements__title {
+        margin-bottom: 5px;
+      }
+
+      #elements .elements__control-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="open-ui">
+    <h2 class="open-ui__title">Open UI</h2>
+    <img class="open-ui__img next" width="280" src="pictures/open-ui-logo.svg" alt="Open UI">
+    <a class="bottom-link" href="https://open-ui.org/" target="_blank" rel="noreferrer">Open UI</a>
+
+    <style>
+      #open-ui .open-ui__img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="decorators">
+    <h2 class="decorators__title next">Decor<span class="decorators__a">@</span>tors</h2>
+    <a class="bottom-link" href="https://github.com/tc39/proposal-decorators" target="_blank" rel="noreferrer">proposal-decorators</a>
+    <style>
+      #decorators .decorators__title {
+        margin: 150px 0 0;
+        text-align: center;
+        font-size: 100px;
+      }
+
+      #decorators .decorators__a {
+        font-size: 120%;
+        color: red;
       }
     </style>
   </section>
