@@ -177,7 +177,7 @@
     <ul class="podcast__list next">
       <li class="podcast__item">Works everywhere</li>
       <li class="podcast__item next">Works <b>well</b> everywhere</li>
-      <li class="podcast__item next">Buuuut, sometimes it's not very convenient</li>
+      <li class="podcast__item next">Buuuut, sometimes isn't very convenient</li>
     </ul>
 
     <style>
@@ -261,6 +261,64 @@
       #dom-implementation-issues .dom-implementation-issues__video {
         display: block;
         margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="class-implementation">
+    <h2 class="class-implementation">Class Implementation 🧱</h2>
+    <div class="class-implementation__code-wrapper">
+      <pre class="class-implementation__code next">
+        <code>class Abstract {</code>
+        <code>  #node = null;</code>
+        <code> </code>
+        <code>  get node() {}</code>
+        <code>  get template() {}</code>
+        <code>  removeNode() {}</code>
+        <code>}</code>
+        <code> </code>
+        <div class="next">
+          <code>class Smart extends AbstractView {</code>
+            <code>  #callbacks = {}</code>
+            <code> </code>
+            <code>  updateNode() {}</code>
+            <code>  initListeners() {}</code>
+            <code>  restoreHandlers() {}</code>
+            <code>}</code>
+            <code> </code>
+        </div>
+      </pre>
+      <pre class="class-implementation__code next">
+        <code>class Timeline extends Smart {</code>
+        <code>  init() {</code>
+        <code>    this.initListeners();</code>
+        <code>  }</code>
+        <code>}</code>
+        <code> </code>
+        <div class="next">
+          <code>class Audio extends Smart {</code>
+            <code>  get template() {</code>
+            <code>    return `</code>
+            <code>      &lt;button</code>
+            <code>        class="player__skip-button"</code>
+            <code>        name="<mark class="important">${SkipAction.PREV}</mark>"</code>
+            <code>       &gt;</code>
+            <code>    `</code>
+            <code>  }</code>
+            <code>}</code>
+        </div>
+      </pre>
+    </div>
+
+    <style>
+      #class-implementation .class-implementation__code-wrapper {
+        display: flex;
+        gap: 50px;
+      }
+
+      #class-implementation .class-implementation__code {
+        width: 50%;
+        font-size: 12px;
       }
     </style>
   </section>
