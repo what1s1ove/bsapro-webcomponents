@@ -420,7 +420,7 @@
   </section>
 
   <section class="slide" id="template">
-    <h2 class="template__title">HTMLTemplateElement</h2>
+    <h2 class="template__title">HTMLTemplateElement 📝</h2>
     <ul class="template__list next">
       <li class="template__item">
         <b class="template__item-title">Concatenation</b>
@@ -433,8 +433,7 @@
           <code>&lt;template id="product"&gt;</code>
           <code>  &lt;h1&gt;🥚&lt;/h1&gt;</code>
           <code>&lt;/template&gt;</code>
-          <code> </code>
-          <code class="next"><span class="comment">&lt;!--index.js--&gt;</span></code>
+          <code class="next"><span class="comment">// index.js</span></code>
           <code class="next">const product = document.querySelector('#product');</code>
           <code class="next">const content = product.<mark class="important">content</mark>.cloneNode(true).innerHTML = '🍳';</code>
           <code class="next">card.append(content);</code>
@@ -450,10 +449,65 @@
     <style>
       #template .template__item {
         font-size: 12px;
+        margin: 0 0 15px;
       }
 
       #template .template__item-title {
         display: block;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="custom-elements">
+    <h2 class="custom-elements__title">Custom Elements 💧🪨🔥💨</h2>
+    <ul class="custom-elements__list next">
+      <li class="custom-elements__item">
+        Custom HTML element
+      </li>
+      <li class="custom-elements__item next">
+        Custom HTML element class
+      </li>
+      <li class="custom-elements__item next">
+        Lifecycle methods
+      </li>
+    </ul>
+    <pre class="custom-elements__code next">
+      <code><span class="comment">&lt;!--index.html--&gt;</span></code>
+      <code>&lt;pirocasts-player&gt;&lt;/pirocasts-player&gt;</code>
+      <code class="next"><span class="comment">// index.js</span></code>
+      <code class="next">class PirocastsPlayer extends HTMLELement { ... }</code>
+      <code class="next">window.customElement.define('pirocasts-player', PirocastsPlayer)</code>
+    </pre>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements" target="_blank" rel="noreferrer">Custom Elements</a>
+
+    <style>
+      #custom-elements .custom-elements__code {
+        font-size: 15px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="custom-elements-lifecycle">
+    <h2 class="custom-elements-lifecycle__title">Custom Elements Lifecycle Methods</h2>
+    <ul class="custom-elements-lifecycle__list next">
+      <li class="custom-elements-lifecycle__item">
+        <code>constructor()</code> – called when an instance of the element is created
+      </li>
+      <li class="custom-elements-lifecycle__item next">
+        <code>connectedCallback()</code> – called when an element is inserted into the DOM
+      </li>
+      <li class="custom-elements-lifecycle__item next">
+        <code>disconnectedCallback()</code> – called when an an element is removed from the DOM
+      </li>
+      <li class="custom-elements-lifecycle__item next">
+        <code>attributeChangedCallback(attrName, oldValue, newValue)</code> – called when an attribute is added, removed or updated
+      </li>
+    </ul>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements" target="_blank" rel="noreferrer">Custom Elements</a>
+
+    <style>
+      #custom-elements-lifecycle .custom-elements-lifecycle__item {
+        font-size: 20px;
       }
     </style>
   </section>
