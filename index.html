@@ -127,9 +127,15 @@
   </section>
 
   <section class="slide" id="today">
-    <h2>In the program today...</h2>
+    <h2>Today in program ...</h2>
     <ul class="next">
       <li>The Story</li>
+      <li class="next">WebComponents</li>
+      <li class="next">Polymer</li>
+      <li class="next">Lit</li>
+      <li class="next">OpenUI</li>
+      <li class="next">Decor@tors</li>
+      <li class="next">Standards</li>
     </ul>
   </section>
 
@@ -162,6 +168,7 @@
         display: flex;
         justify-content: center;
         width: 300px;
+        padding: 30px;
         margin: 0 auto;
         background-color: #222222;
       }
@@ -223,7 +230,7 @@
 
   <section class="slide" id="dom-implementation">
     <h2 class="dom-implementation__title">DOM Implementation 🌳</h2>
-    <pre class="dom-implementation__code">
+    <pre class="dom-implementation__code next">
       <code>const initPlayer = () => {</code>
       <code>  const playerNode = document.querySelector('.episode__native-player');</code>
       <code> </code>
@@ -342,6 +349,239 @@
       #class-implementation-issues .class-implementation-issues__desc {
         font-size: 75px;
         line-height: 1;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="solution">
+    <h2 class="solution__title">Solution <span class="next">– progressive enhancement</span></h2>
+    <p class="solution__desc next">
+      <b>WebComponents</b>
+    </p>
+
+    <style>
+      #solution .solution__title {
+        margin-bottom: 120px;
+      }
+
+      #solution .solution__desc {
+        text-align: center;
+        font-size: 100px;
+        line-height: 1;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="bad-google">
+    <h2 class="bad-google__title">Google product be like:</h2>
+    <ul class="bad-google__list next">
+      <li class="bad-google__item">Create new technology to Chrome without asking anyone</li>
+      <li class="bad-google__item next">Immediately create a framework for <i>comfortable</i> working with this new technology (:jerry:)</li>
+      <li class="bad-google__item next">"Google what the hell?"</li>
+      <li class="bad-google__item next">"Look, we already have frameworks and users who use this technology. We cannot get rid of this."</li>
+    </ul>
+
+    <style>
+      #bad-google .bad-google__item {
+        font-size: 20px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="web-components">
+    <h2 class="web-components__title">Web Components <small class="next">– a set of modern specifications</small></h2>
+    <ul class="web-components__list next">
+      <li class="web-components__item">
+        <a class="web-components__link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements" target="_blank" rel="noreferrer">
+          Custom Elements
+          <ul class="web-components__list next">
+            <li class="web-components__item">
+              <a class="web-components__link" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement" target="_blank" rel="noreferrer">
+                HTMLSlotElement
+              </a>
+            </li>
+          </ul>
+        </a>
+      </li>
+      <li class="web-components__item next">
+        <a class="web-components__link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noreferrer">
+          Shadow DOM
+        </a>
+      </li>
+      <li class="web-components__item next">
+        <a class="web-components__link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank" rel="noreferrer">
+          HTMLTemplateElement
+        </a>
+      </li>
+      <li class="web-components__item next">
+        <a class="web-components__link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank" rel="noreferrer">
+          HTML Imports
+        </a>
+      </li>
+      <li class="web-components__item next">
+        CSS properties, custom attributes, custom events, pseudo-classes, pseudo-elements and etc.
+      </li>
+    </ul>
+    <a class="bottom-link" href="https://www.webcomponents.org/" target="_blank" rel="noreferrer">WebComponents</a>
+  </section>
+
+  <section class="slide" id="template">
+    <h2 class="template__title">HTMLTemplateElement 📝</h2>
+    <ul class="template__list next">
+      <li class="template__item">
+        <b class="template__item-title">Concatenation</b>
+        <code>'&lt;h1&gt;' + user.name + '&lt;/h1&gt;'</code>
+      </li>
+      <li class="template__item next">
+        <b class="template__item-title">HTMLTemplateElement</b>
+        <pre class="template__code">
+          <code><span class="comment">&lt;!--index.html--&gt;</span></code>
+          <code>&lt;template id="product"&gt;</code>
+          <code>  &lt;h1&gt;🥚&lt;/h1&gt;</code>
+          <code>&lt;/template&gt;</code>
+          <code class="next"><span class="comment">// index.js</span></code>
+          <code class="next">const product = document.querySelector('#product');</code>
+          <code class="next">const content = product.<mark class="important">content</mark>.cloneNode(true).innerHTML = '🍳';</code>
+          <code class="next">card.append(content);</code>
+        </pre>
+      </li>
+      <li class="template__item next">
+        <b class="template__item-title">Template Literals</b>
+        <code>`&lt;h1&gt;${user.name}&lt;/h1&gt;`</code>
+      </li>
+    </ul>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank" rel="noreferrer">HTMLTemplateElement</a>
+
+    <style>
+      #template .template__item {
+        font-size: 12px;
+        margin: 0 0 15px;
+      }
+
+      #template .template__item-title {
+        display: block;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="custom-elements">
+    <h2 class="custom-elements__title">Custom Elements 💧🪨🔥💨</h2>
+    <ul class="custom-elements__list next">
+      <li class="custom-elements__item">
+        Custom HTML element
+      </li>
+      <li class="custom-elements__item next">
+        Custom HTML element class
+      </li>
+      <li class="custom-elements__item next">
+        Lifecycle methods
+      </li>
+    </ul>
+    <pre class="custom-elements__code next">
+      <code><span class="comment">&lt;!--index.html--&gt;</span></code>
+      <code>&lt;pirocasts-player&gt;&lt;/pirocasts-player&gt;</code>
+      <code class="next"><span class="comment">// index.js</span></code>
+      <code class="next">class PirocastsPlayer extends HTMLELement { ... }</code>
+      <code class="next">window.customElement.define('pirocasts-player', PirocastsPlayer)</code>
+    </pre>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements" target="_blank" rel="noreferrer">Custom Elements</a>
+
+    <style>
+      #custom-elements .custom-elements__code {
+        font-size: 15px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="custom-elements-lifecycle">
+    <h2 class="custom-elements-lifecycle__title">Custom Elements Lifecycle Methods</h2>
+    <ul class="custom-elements-lifecycle__list next">
+      <li class="custom-elements-lifecycle__item">
+        <code>constructor()</code> – called when an instance of the element is created
+      </li>
+      <li class="custom-elements-lifecycle__item next">
+        <code>connectedCallback()</code> – called when an element is inserted into the DOM
+      </li>
+      <li class="custom-elements-lifecycle__item next">
+        <code>disconnectedCallback()</code> – called when an an element is removed from the DOM
+      </li>
+      <li class="custom-elements-lifecycle__item next">
+        <code>attributeChangedCallback(attrName, oldValue, newValue)</code> – called when an attribute is added, removed or updated
+      </li>
+    </ul>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements" target="_blank" rel="noreferrer">Custom Elements</a>
+
+    <style>
+      #custom-elements-lifecycle .custom-elements-lifecycle__item {
+        font-size: 20px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="shadow-dom">
+    <h2 class="shadow-dom__title">ShadowDOM</h2>
+    <ul class="shadow-dom__list next">
+      <li class="shadow-dom__item">Encapsulate styles, markup, js <b>(but css properties works!)</b></li>
+      <li class="shadow-dom__item next">Opens with <code>element.attachShadow({ mode: 'open' })</code></li>
+      <li class="shadow-dom__item next">Or <code>&lt;template shadowroot="open"&gt;&lt;/template&gt;</code></li>
+      <li class="shadow-dom__item next">Opens a <code>this.shadowRoot</code></li>
+      <p class="shadow-dom__example-wrapper next">
+        <b class="shadow-dom__example-title">Ex:</b>
+        <input type="text" value="Vladek Kek" placeholder="Input your name">
+      </p>
+    </ul>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noreferrer">Shadow DOM</a>
+
+    <style>
+      #shadow-dom .shadow-dom__example-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="slot">
+    <h2 class="slot__title">HTMLSlotElement</h2>
+    <pre class="slot__code next">
+      <code><span class="comment">&lt;!--index.html--&gt;</span></code>
+      <code>&lt;user-card&gt;</code>
+      <code>  &lt;img src="deadinside.jpg" <mark>slot="avatar"</mark>&gt;</code>
+      <code>  &lt;span <mark>slot="nickname"</mark>&gt;deadinside&lt;/span&gt;</code>
+      <code>&lt;/user-card&gt;</code>
+      <div class="next">
+        <code> </code>
+        <code><span class="comment">// index.js</span></code>
+        <code>template.innerHTML = `</code>
+        <code>  &lt;li slot="nickname"&gt;</code>
+        <code>    <mark class="important">&lt;slot name="avatar"&gt;&lt;/slot&gt;</mark></code>
+        <code>    &lt;h3&gt;<mark class="important">&lt;slot name="nickname"&gt;&lt;/slot&gt;</mark>&lt;/h3&gt;</code>
+        <code>  &lt;/li&gt;</code>
+        <code>`</code>
+      </div>
+    </pre>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement" target="_blank" rel="noreferrer">HTMLSlotElement</a>
+
+    <style>
+      #slot .slot__code {
+        font-size: 14px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="htmlimport">
+    <h2 class="htmlimport__title">HTMLImports</h2>
+    <p class="htmlimport__description next">🚫 💀 🐍 💉 💊</p>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank" rel="noreferrer">HTML Imports</a>
+
+    <style>
+      #htmlimport .htmlimport__title {
+        margin-bottom: 120px;
+      }
+
+      #htmlimport .htmlimport__description {
+        text-align: center;
+        font-size: 70px;
       }
     </style>
   </section>
@@ -473,6 +713,100 @@
     </style>
   </section>
 
+  <section class="slide" id="open-ui-in-action">
+    <h2>Open UI in Action</h2>
+    <video class="open-ui-in-action__video next" src="pictures/open-ui-in-action.mp4" width="500" autoplay muted loop playsinline></video>
+    <a class="bottom-link" href="https://twitter.com/patrickbrosset/status/1470346157100568579" target="_blank" rel="noreferrer">@patrickbrosset</a>
+
+    <style>
+      #open-ui-in-action .open-ui-in-action__video {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="who-use">
+    <h2 class="who-use__title">Who Uses WebComponents</h2>
+    <ul class="who-use__list next">
+      <li class="who-use__item">Google (:jerry:)</li>
+      <li class="who-use__item next">Microsoft</li>
+      <li class="who-use__item next">SalesForce</li>
+      <li class="who-use__item next">Adobe</li>
+      <li class="who-use__item next">IBM</li>
+      <li class="who-use__item next">and moooore...</li>
+    </ul>
+  </section>
+
+  <section class="slide" id="top-usecase">
+    <h2 class="top-usecase__title">Top Usecase</h2>
+    <ul class="top-usecase__list next">
+      <li class="top-usecase__item top-usecase__item--react">
+        Micro App 1
+        <img src="pictures/react-logo.svg" width="100" alt="React logo">
+      </li>
+      <li class="top-usecase__item top-usecase__item--svelte next">
+        Micro App 2
+        <img src="pictures/svelte-logo.svg" width="80" alt="Svelte logo">
+      </li>
+      <li class="top-usecase__item top-usecase__item--vue next">
+        Micro App 3
+        <img src="pictures/vue-logo.svg" width="105" alt="Vue logo">
+      </li>
+    </ul>
+    <p class="top-usecase__shared next">
+      Shared
+      <img src="pictures/webcomponents.svg" width="90">
+    </p>
+    <a class="bottom-link" href="https://www.toptal.com/front-end/micro-frontends-strengths-benefits" target="_blank" rel="noreferrer">MicroFrontends</a>
+
+    <style>
+      #top-usecase .top-usecase__list {
+        display: flex;
+        gap: 0 30px
+      }
+
+      #top-usecase .top-usecase__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        padding: 10px;
+        border: 3px dashed #000000;
+        border-radius: 25px;
+      }
+
+      #top-usecase .top-usecase__item--react {
+        color: #61DAFB;
+        border-color: #61DAFB;
+      }
+
+      #top-usecase .top-usecase__item--svelte {
+        color: #FF3E00;
+        border-color: #FF3E00;
+      }
+
+      #top-usecase .top-usecase__item--vue {
+        color: #41b883;
+        border-color: #41b883;
+      }
+
+      #top-usecase .top-usecase__item::before {
+        display: none;
+      }
+
+      #top-usecase .top-usecase__shared {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        color: #010101;
+        border: 3px dashed #010101;
+        border-radius: 25px;
+      }
+    </style>
+  </section>
+
   <section class="slide" id="decorators">
     <h2 class="decorators__title next">Decor<span class="decorators__a">@</span>tors</h2>
     <a class="bottom-link" href="https://github.com/tc39/proposal-decorators" target="_blank" rel="noreferrer">proposal-decorators</a>
@@ -488,6 +822,177 @@
         color: red;
       }
     </style>
+  </section>
+
+  <section class="slide" id="standards">
+    <h2 class="standards__title">Standards ✨</h2>
+
+    <style>
+      #standards {
+        display: grid;
+        place-items: center;
+      }
+
+      #standards .standards__title {
+        font-size: 80px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="standards-convenience">
+    <h2 class="standards-convenience__title">React Router DOM</h2>
+    <p class="standards-convenience__desc">
+      <span class="standards-convenience__desc-lie next">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank" rel="noreferrer">HistoryAPI</a>
+        &
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location" target="_blank" rel="noreferrer">LocationAPI</a>
+        <span class="standards-convenience__desc-dash next"></span>
+      </span>
+      <span class="standards-convenience__desc-truth next">
+        <a href="https://web.dev/app-history-api/" target="_blank" rel="noreferrer">App History API</a>
+      </span>
+    </p>
+
+    <style>
+      #standards-convenience .standards-convenience__title {
+        margin-bottom: 100px;
+      }
+
+      #standards-convenience .standards-convenience__desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px 0;
+        line-height: 1.5;
+
+        font-size: 40px;
+      }
+
+      #standards-convenience .standards-convenience__desc-lie {
+        position: relative;
+      }
+
+      #stickers-convenience .stickers-convenience__desc-dash {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(10deg);
+        width: 100%;
+        height: 2px;
+        background-color: red;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="standards-reliability">
+    <h2 class="standards-reliability__title">Array.prototype</h2>
+    <ul class="standards-reliability__list next">
+      <li class="standards-reliability__item">
+        <pre class="standards-reliability__code">
+          <code>// index.js</code>
+          <code>import { <mark>groupBy</mark> } from 'https://deno.land/x/lodash';</code>
+          <code> </code>
+          <code>const getGroupedOffersByCity = (offers) => {</code>
+          <code>  return <mark>groupBy</mark>(offers, (it) => it.city.name)</code>
+          <code>};</code>
+          <code> </code>
+        </pre>
+      </li>
+      <li class="standards-reliability__item next">
+        <pre class="standards-reliability__code">
+          <code>// index.js</code>
+          <code>const getGroupedOffersByCity = (offers) => {</code>
+          <code>  return offers.<mark class="important">groupBy</mark>((it) => it.city.name)</code>
+          <code>};</code>
+          <code> </code>
+        </pre>
+      </li>
+    </ul>
+
+    <style>
+      #standards-reliability .standards-reliability__list {
+        display: flex;
+        gap: 0 50px
+      }
+
+      #standards-reliability .standards-reliability__item {
+        width: 50%;
+      }
+
+      #standards-reliability .standards-reliability__item::before {
+        display: none;
+      }
+
+      #standards-reliability .standards-reliability__code {
+        font-size: 13px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="standards-friendly">
+    <h2 class="standards-friendly__title">User Friendly</h2>
+    <ul class="standards-friendly__list next">
+      <li class="standards-friendly__item">
+        <img src="pictures/friendly-bad.png" width="200" alt="Bad user-friendly example">
+      </li>
+      <li class="standards-friendly__item next">
+        <img src="pictures/friendly-good.png" width="200"  alt="Good user-friendly example">
+      </li>
+    </ul>
+
+    <style>
+      #standards-friendly .standards-friendly__list {
+        display: flex;
+        gap: 0 50px
+      }
+
+      #standards-friendly .standards-friendly__item {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+      }
+
+      #standards-friendly .standards-friendly__item::before {
+        display: none;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="homework">
+    <h2 class="homework__title">Homework 🛖</h2>
+
+    <style>
+      #homework {
+        display: grid;
+        place-items: center;
+      }
+
+      #homework .homework__title {
+        font-size: 75px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="homework-preview">
+    <img class="homework-preview__img cover" src="pictures/hometask-review.png" alt="Hometask preview">
+
+    <style>
+      #homework-preview .homework-preview__img {
+        transform: translate(-50%, -50%) scale(1.02);
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="homework-task">
+    <h2 class="homework-task__title">Homework 🛖</h2>
+    <ul class="homework-task__list next">
+      <li class="homework-task__item">
+        <a href="https://github.com/what1s1ove/bsapro-webcomponents-homework" target="_blank" rel="noreferrer">Form Repo</a>
+      </li>
+      <li class="homework-task__item next">Do it</li>
+      <li class="homework-task__item next">Make Pull Request</li>
+      <li class="homework-task__item next">Receive gift ✨</li>
+    </ul>
   </section>
 
   <section class="slide" id="stickers">
