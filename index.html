@@ -732,6 +732,75 @@
     </ul>
   </section>
 
+  <section class="slide" id="top-usecase">
+    <h2 class="top-usecase__title">Top Usecase</h2>
+    <ul class="top-usecase__list next">
+      <li class="top-usecase__item top-usecase__item--react">
+        Micro App 1
+        <img src="pictures/react-logo.svg" width="100">
+      </li>
+      <li class="top-usecase__item top-usecase__item--svelte next">
+        Micro App 2
+        <img src="pictures/svelte-logo.svg" width="80">
+      </li>
+      <li class="top-usecase__item top-usecase__item--vue next">
+        Micro App 3
+        <img src="pictures/vue-logo.svg" width="105">
+      </li>
+    </ul>
+    <p class="top-usecase__shared next">
+      Shared
+      <img src="pictures/webcomponents.svg" width="90">
+    </p>
+    <a class="bottom-link" href="https://www.toptal.com/front-end/micro-frontends-strengths-benefits" target="_blank" rel="noreferrer">MicroFrontends</a>
+
+    <style>
+      #top-usecase .top-usecase__list {
+        display: flex;
+        gap: 0 30px
+      }
+
+      #top-usecase .top-usecase__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        padding: 10px;
+        border: 3px dashed #000000;
+        border-radius: 25px;
+      }
+
+      #top-usecase .top-usecase__item--react {
+        color: #61DAFB;
+        border-color: #61DAFB;
+      }
+
+      #top-usecase .top-usecase__item--svelte {
+        color: #FF3E00;
+        border-color: #FF3E00;
+      }
+
+      #top-usecase .top-usecase__item--vue {
+        color: #41b883;
+        border-color: #41b883;
+      }
+
+      #top-usecase .top-usecase__item::before {
+        display: none;
+      }
+
+      #top-usecase .top-usecase__shared {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        color: #010101;
+        border: 3px dashed #010101;
+        border-radius: 25px;
+      }
+    </style>
+  </section>
+
   <section class="slide" id="decorators">
     <h2 class="decorators__title next">Decor<span class="decorators__a">@</span>tors</h2>
     <a class="bottom-link" href="https://github.com/tc39/proposal-decorators" target="_blank" rel="noreferrer">proposal-decorators</a>
