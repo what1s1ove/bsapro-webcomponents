@@ -737,15 +737,15 @@
     <ul class="top-usecase__list next">
       <li class="top-usecase__item top-usecase__item--react">
         Micro App 1
-        <img src="pictures/react-logo.svg" width="100">
+        <img src="pictures/react-logo.svg" width="100" alt="React logo">
       </li>
       <li class="top-usecase__item top-usecase__item--svelte next">
         Micro App 2
-        <img src="pictures/svelte-logo.svg" width="80">
+        <img src="pictures/svelte-logo.svg" width="80" alt="Svelte logo">
       </li>
       <li class="top-usecase__item top-usecase__item--vue next">
         Micro App 3
-        <img src="pictures/vue-logo.svg" width="105">
+        <img src="pictures/vue-logo.svg" width="105" alt="Vue logo">
       </li>
     </ul>
     <p class="top-usecase__shared next">
@@ -919,6 +919,35 @@
 
       #standards-reliability .standards-reliability__code {
         font-size: 13px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="standards-friendly">
+    <h2 class="standards-friendly__title">User Friendly</h2>
+    <ul class="standards-friendly__list next">
+      <li class="standards-friendly__item">
+        <img src="pictures/friendly-bad.png" width="200" alt="Bad user-friendly example">
+      </li>
+      <li class="standards-friendly__item next">
+        <img src="pictures/friendly-good.png" width="200"  alt="Good user-friendly example">
+      </li>
+    </ul>
+
+    <style>
+      #standards-friendly .standards-friendly__list {
+        display: flex;
+        gap: 0 50px
+      }
+
+      #standards-friendly .standards-friendly__item {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+      }
+
+      #standards-friendly .standards-friendly__item::before {
+        display: none;
       }
     </style>
   </section>
