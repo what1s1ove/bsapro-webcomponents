@@ -535,6 +535,34 @@
     </style>
   </section>
 
+  <section class="slide" id="slot">
+    <h2 class="slot__title">HTMLSlotElement</h2>
+    <pre class="slot__code next">
+      <code><span class="comment">&lt;!--index.html--&gt;</span></code>
+      <code>&lt;user-card&gt;</code>
+      <code>  &lt;img src="deadinside.jpg" <mark>slot="avatar"</mark>&gt;</code>
+      <code>  &lt;span <mark>slot="nickname"</mark>&gt;deadinside&lt;/span&gt;</code>
+      <code>&lt;/user-card&gt;</code>
+      <div class="next">
+        <code> </code>
+        <code><span class="comment">// index.js</span></code>
+        <code>template.innerHTML = `</code>
+        <code>  &lt;li slot="nickname"&gt;</code>
+        <code>    <mark class="important">&lt;slot name="avatar"&gt;&lt;/slot&gt;</mark></code>
+        <code>    &lt;h3&gt;<mark class="important">&lt;slot name="nickname"&gt;&lt;/slot&gt;</mark>&lt;/h3&gt;</code>
+        <code>  &lt;/li&gt;</code>
+        <code>`</code>
+      </div>
+    </pre>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement" target="_blank" rel="noreferrer">HTMLSlotElement</a>
+
+    <style>
+      #slot .slot__code {
+        font-size: 14px;
+      }
+    </style>
+  </section>
+
   <section class="slide" id="polymer">
     <h2 class="polymer__title">Polymer</h2>
     <img class="polymer__img next" width="320" src="pictures/polymer-logo.svg" alt="Polymer">
