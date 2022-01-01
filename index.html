@@ -413,7 +413,7 @@
         </a>
       </li>
       <li class="web-components__item next">
-        CSS properties, custom attributes, custom events and etc.
+        CSS properties, custom attributes, custom events, pseudo-classes, pseudo-elements and etc.
       </li>
     </ul>
     <a class="bottom-link" href="https://www.webcomponents.org/" target="_blank" rel="noreferrer">WebComponents</a>
@@ -508,6 +508,29 @@
     <style>
       #custom-elements-lifecycle .custom-elements-lifecycle__item {
         font-size: 20px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="shadow-dom">
+    <h2 class="shadow-dom__title">ShadowDOM</h2>
+    <ul class="shadow-dom__list next">
+      <li class="shadow-dom__item">Encapsulate styles, markup, js <b>(but css properties works!)</b></li>
+      <li class="shadow-dom__item next">Opens with <code>element.attachShadow({ mode: 'open' })</code></li>
+      <li class="shadow-dom__item next">Or <code>&lt;template shadowroot="open"&gt;&lt;/template&gt;</code></li>
+      <li class="shadow-dom__item next">Opens a <code>this.shadowRoot</code></li>
+      <p class="shadow-dom__example-wrapper next">
+        <b class="shadow-dom__example-title">Ex:</b>
+        <input type="text" value="Vladek Kek" placeholder="Input your name">
+      </p>
+    </ul>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noreferrer">Shadow DOM</a>
+
+    <style>
+      #shadow-dom .shadow-dom__example-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
       }
     </style>
   </section>
