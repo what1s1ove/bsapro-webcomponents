@@ -589,6 +589,40 @@
     </style>
   </section>
 
+  <section class="slide" id="events">
+    <h2 class="events__title">Events</h2>
+    <pre class="events__code next">
+      <code>playerNode.addEventListener(PlayerEventName.VOLUME, ({ target }) => {</code>
+      <code>  storage.setItem(PlayerAttrName.VOLUME, target.volume);</code>
+      <code>});</code>
+      <code> </code>
+      <div class="next">
+        <code> class PirocastsPlater extends HTMLElement {</code>
+          <code> </code>
+          <code>  set volume() { </code>
+          <code>    this.dispatchEvent(<mark>new Event</mark>(PlayerEventName.VOLUME)); </code>
+          <code>  } </code>
+          <code> </code>
+      </div>
+      <div class="next">
+        <code>  set playbackRate() { </code>
+          <code>    this.dispatchEvent(<mark>new CustomEvent</mark>(PlayerEventName.PLAYBACKRATE, { </code>
+          <code>      details: { </code>
+          <code>        playbackRate:  this.playbackRate, </code>
+          <code>      }, </code>
+          <code>    })); </code>
+          <code>  } </code>
+      </div>
+    </pre>
+    <a class="bottom-link" href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events" target="_blank" rel="noreferrer">Custom Event</a>
+
+    <style>
+      #events .events__code {
+        font-size: 10px;
+      }
+    </style>
+  </section>
+
   <section class="slide" id="polymer">
     <h2 class="polymer__title">Polymer</h2>
     <img class="polymer__img next" width="320" src="pictures/polymer-logo.svg" alt="Polymer">
